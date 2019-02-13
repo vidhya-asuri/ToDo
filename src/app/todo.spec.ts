@@ -1,4 +1,5 @@
 import { Todo } from './todo';
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 describe('Todo', () => {
   it('should create an instance', () => {
