@@ -1,6 +1,6 @@
 import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import { Todo } from '../todo';
-import {ToDoDataService} from '../to-do-data-service';
+import {ToDoDataService} from '../to-do-data.service';
 
 @Component({
   selector: 'app-todo-list-header',
@@ -10,10 +10,10 @@ import {ToDoDataService} from '../to-do-data-service';
 export class TodoListHeaderComponent implements OnInit {
   newTodo: Todo = new Todo();
 
-  constructor(private to-do-data-service: ToDoDataService) { }
+  constructor(private toDoDataService: ToDoDataService) { }
    
   addTodo(todo: Todo) {
-     this.to-do-data-service = this.to-do-data-service.addToDo(todo);
+     this.toDoDataService = this.toDoDataService.addToDo(todo);
   }
    
   ngOnInit() {
