@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
-import {TodoDataService} from './todo-data.service';
+import {ToDoDataService} from './to-do-data.service';
 import {Todo} from './todo';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [TodoDataService]
+  providers: [ToDoDataService]
 })
 export class AppComponent {
   newTodo: Todo = new Todo();
-  constructor(private todoDataService: TodoDataService)
+  constructor(private todoDataService: ToDoDataService)
   {
 
   }
   addTodo() {
-    this.todoDataService.addTodo(this.newTodo);
+    this.todoDataService.addToDo(this.newTodo);
     this.newTodo = new Todo();
   }
   
